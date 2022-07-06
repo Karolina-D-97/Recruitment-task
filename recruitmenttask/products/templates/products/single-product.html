@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>{{ product.title }}</h1>
+<hr>
+{% for w in product.warehouse.all %}
+    <span style="border:1px solid grey">{{w}}</span>
+{% endfor %}
+<p>{{ product.description }}</p>
+
+{% endblock content %}
